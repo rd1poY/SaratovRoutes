@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "9X+P9kFTBM4=",
+  "success": true,
+  "projectFilePath": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes.iOS\\SaratovRoutes.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Prog\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Prog\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Prog\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Prog\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Prog\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

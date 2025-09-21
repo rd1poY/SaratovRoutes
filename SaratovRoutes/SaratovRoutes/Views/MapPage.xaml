@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaratovRoutes.Views.MapPage"
+             BackgroundColor="#FFFFFF">
+    <ContentPage.Content>
+        <StackLayout>
+    
+        <WebView x:Name="MapView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+
+
+
+            <Frame BackgroundColor="White"
+         HasShadow="True"
+         CornerRadius="10"
+         Margin="2"
+         Padding="0"
+        >
+                <StackLayout BackgroundColor="White" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal"
+                   Padding="10,5,10,5" Margin="0,0,0,0">
+                    <Frame BackgroundColor="White"
+                 HasShadow="True"
+                 CornerRadius="10"
+                 Margin="1"
+                 Padding="0">
+                        <ImageButton Margin="20,0,20,0" BackgroundColor="White" Source="routes_icon.png"  Clicked="ButtonRoutes_Clicked" WidthRequest="50" HeightRequest="50"
+                           Pressed="OnButtonPressed" Released="OnButtonReleased"/>
+                    </Frame>
+                    <Frame BackgroundColor="LightGray"
+                 HasShadow="True"
+                 CornerRadius="10"
+                 Margin="1"
+                 Padding="0">
+                        <ImageButton Margin="20,0,20,0" BackgroundColor="LightGray" Source="map_icon.png" WidthRequest="50" HeightRequest="50"
+                           Pressed="OnButtonPressed" Released="OnButtonReleased"/>
+                    </Frame>
+                    <Frame BackgroundColor="White"
+                 HasShadow="True"
+                 CornerRadius="10"
+                 Margin="1"
+                 Padding="0">
+                        <ImageButton Margin="20,0,20,0" BackgroundColor="White" Source="weather_icon.png" Clicked="ButtonWeather_Clicked" WidthRequest="50" HeightRequest="50"
+                           Pressed="OnButtonPressed" Released="OnButtonReleased"/>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

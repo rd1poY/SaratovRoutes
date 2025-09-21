@@ -1,0 +1,216 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\prog\\SaratovRoutes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\views\\addroutepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\views\\addroutepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\views\\addroutepage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\views\\addroutepage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\models\\route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\models\\route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\app.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\app.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\views\\attrationspage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\views\\attrationspage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\resources\\attration.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\resources\\attration.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\resources\\routes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\resources\\routes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\models\\shiwplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\models\\shiwplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\views\\routespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\views\\routespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\views\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\views\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|c:\\prog\\saratovroutes\\saratovroutes\\saratovroutes\\views\\attrationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603F56B1-BDF3-410A-BE64-3D60CEB3ABFD}|SaratovRoutes\\SaratovRoutes\\SaratovRoutes.csproj|solutionrelative:saratovroutes\\saratovroutes\\views\\attrationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 208,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddRoutePage.xaml.cs",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\AddRoutePage.xaml.cs",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\Views\\AddRoutePage.xaml.cs",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\AddRoutePage.xaml.cs",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\Views\\AddRoutePage.xaml.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T10:22:58.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddRoutePage.xaml",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\AddRoutePage.xaml",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\Views\\AddRoutePage.xaml",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\AddRoutePage.xaml",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\Views\\AddRoutePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-20T07:00:08.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\App.xaml",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\App.xaml",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\App.xaml",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-20T06:42:43.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Attration.json",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Resources\\Attration.json",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\Resources\\Attration.json",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Resources\\Attration.json",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\Resources\\Attration.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-11T17:04:22.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Route.cs",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Models\\Route.cs",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\Models\\Route.cs",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Models\\Route.cs",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\Models\\Route.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T17:04:21.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MapPage.xaml.cs",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\MapPage.xaml.cs",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\Views\\MapPage.xaml.cs",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\MapPage.xaml.cs",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\Views\\MapPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T16:47:28.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\App.xaml.cs",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\App.xaml.cs",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\App.xaml.cs",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T16:47:28.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Shiwplace.cs",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Models\\Shiwplace.cs",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\Models\\Shiwplace.cs",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Models\\Shiwplace.cs",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\Models\\Shiwplace.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T16:47:28.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AttrationsPage.xaml",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\AttrationsPage.xaml",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\Views\\AttrationsPage.xaml",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\AttrationsPage.xaml",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\Views\\AttrationsPage.xaml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAADcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-11T16:47:28.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AttrationsPage.xaml.cs",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\AttrationsPage.xaml.cs",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\Views\\AttrationsPage.xaml.cs",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\AttrationsPage.xaml.cs",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\Views\\AttrationsPage.xaml.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAADgvywAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T16:47:28.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Routes.json",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Resources\\Routes.json",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\Resources\\Routes.json",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Resources\\Routes.json",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\Resources\\Routes.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-11T16:47:28.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoutesPage.xaml.cs",
+              "DocumentMoniker": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\RoutesPage.xaml.cs",
+              "RelativeDocumentMoniker": "SaratovRoutes\\SaratovRoutes\\Views\\RoutesPage.xaml.cs",
+              "ToolTip": "C:\\prog\\SaratovRoutes\\SaratovRoutes\\SaratovRoutes\\Views\\RoutesPage.xaml.cs",
+              "RelativeToolTip": "SaratovRoutes\\SaratovRoutes\\Views\\RoutesPage.xaml.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwDQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T16:47:28.509Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

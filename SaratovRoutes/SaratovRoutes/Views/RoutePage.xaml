@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="SaratovRoutes.Views.RoutePage"
+             Title="{Binding Title}"
+             BackgroundColor="White">
+    <Grid RowDefinitions="*,Auto">
+        <!-- ScrollView для контента маршрута -->
+        <ScrollView Grid.Row="0" VerticalScrollBarVisibility="Always">
+            <StackLayout Padding="10" Spacing="10">
+                <!-- Изображение маршрута -->
+                <Frame HasShadow="True" CornerRadius="10">
+                    <Image Source="{Binding ImgRoute}" Aspect="AspectFill" HeightRequest="200"/>
+                </Frame>
+
+                <!-- Название маршрута -->
+                <Label Text="{Binding Title}" 
+                       FontSize="24" 
+                       FontAttributes="Bold" 
+                       TextColor="Black" 
+                       HorizontalOptions="CenterAndExpand" />
+
+                <!-- Город и время маршрута -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="{Binding City}" 
+                           FontSize="16" 
+                           TextColor="Gray" 
+                           HorizontalOptions="Center" />
+                    <Label Text=" • " 
+                           FontSize="16" 
+                           TextColor="Gray" />
+                    <Label Text="{Binding time}" 
+                           FontSize="16" 
+                           TextColor="Gray" 
+                           HorizontalOptions="Center" />
+                </StackLayout>
+
+                <!-- Описание маршрута -->
+                <Label Text="{Binding Description}" 
+                       FontSize="16" 
+                       TextColor="Black" 
+                       LineBreakMode="WordWrap" />
+            </StackLayout>
+        </ScrollView>
+
+        <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="10" Spacing="10">
+            <Button Text="Показать на карте" 
+                    Clicked="ButtonMapOpen_Clicked" 
+                    HeightRequest="50" 
+                    VerticalOptions="End"
+                    Pressed="OnButtonPressed" Released="OnButtonReleased"
+                    HorizontalOptions="FillAndExpand" 
+                    BackgroundColor="Black"
+                    FontSize="14"
+                    TextColor="White"/>
+
+            <!-- Кнопка "Удалить" -->
+            <Button Text="Удалить" 
+                    Clicked="ButtonDelete_Clicked" 
+                    HeightRequest="50" 
+                    Pressed="OnButtonPressed" Released="OnButtonReleased"
+                    VerticalOptions="End" 
+                    HorizontalOptions="FillAndExpand" 
+                    BackgroundColor="Black"
+                    FontSize="14"
+                    TextColor="White">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button" Binding="{Binding Type}" Value="Пмаршрут">
+                        <Setter Property="IsVisible" Value="True"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Button" Binding="{Binding Type}" Value="Маршрут">
+                        <Setter Property="IsVisible" Value="False"/>
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <!-- Кнопка "Отправить на модерацию" -->
+            <Button Text="Поделиться" 
+                    Clicked="ButtonModerate_Clicked" 
+                    HeightRequest="50" 
+                    Pressed="OnButtonPressed" Released="OnButtonReleased"
+                    VerticalOptions="End" 
+                    HorizontalOptions="FillAndExpand" 
+                    BackgroundColor="Black"
+                    FontSize="14"
+                    TextColor="White">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button" Binding="{Binding Type}" Value="Пмаршрут">
+                        <Setter Property="IsVisible" Value="True"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Button" Binding="{Binding Type}" Value="Маршрут">
+                        <Setter Property="IsVisible" Value="False"/>
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+        </StackLayout>
+    </Grid>
+</ContentPage>
+
+
