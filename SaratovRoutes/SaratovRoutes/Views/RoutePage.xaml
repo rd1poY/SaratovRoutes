@@ -11,7 +11,13 @@
             <StackLayout Padding="10" Spacing="10">
                 <!-- Изображение маршрута -->
                 <Frame HasShadow="True" CornerRadius="10">
-                    <Image Source="{Binding ImgRoute}" Aspect="AspectFill" HeightRequest="200"/>
+                    <CarouselView x:Name="ImagesCarousel" HeightRequest="200">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding .}" Aspect="AspectFill" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
                 </Frame>
 
                 <!-- Название маршрута -->

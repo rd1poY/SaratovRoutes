@@ -24,6 +24,7 @@ namespace SaratovRoutes.Views
             _route = route;
             BindingContext = route;
             _routesFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Routes.json");
+            ImagesCarousel.ItemsSource = new List<string> { _route.ImgRoute, _route.ImgRoutes };
         }
 
         private async void ButtonMapOpen_Clicked(object sender, EventArgs e)
