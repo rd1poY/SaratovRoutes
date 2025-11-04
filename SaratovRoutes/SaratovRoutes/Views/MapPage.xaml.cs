@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using SaratovRoutes.Models;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
@@ -13,11 +17,13 @@ namespace SaratovRoutes.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MapPage : ContentPage
     {
+        private List<Route> _routes;
+
         public MapPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-          
+            LoadRoutes();
             MapInit(); // Вызываем метод без передачи координат
         }
 
@@ -25,11 +31,33 @@ namespace SaratovRoutes.Views
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+            LoadRoutes();
             MapInit(coordinatesString); // Вызываем метод с передачей координат
+        }
+        private void LoadRoutes()
+        {
+            var assembly = typeof(MapPage).GetTypeInfo().Assembly;
+            Stream stream = assembly.GetManifestResourceStream("SaratovRoutes.Resources.Routes.json");
+            using (var reader = new StreamReader(stream))
+            {
+                var json = reader.ReadToEnd();
+                _routes = JsonConvert.DeserializeObject<List<Route>>(json);
+            }
         }
 
         public void MapInit(string coordinatesString = null)
         {
+
+
+            var placemarks = _routes.Select(r => new
+            {
+                id = r.Id,
+                title = r.Title,
+                coordinates = r.Coordinates.Split('|')[0].Split(',').Select(c => double.Parse(c, System.Globalization.CultureInfo.InvariantCulture)).ToArray()
+            });
+
+            string placemarksJson = JsonConvert.SerializeObject(placemarks);
+
             string htmlContent = $@"
         <!DOCTYPE html>
         <html>
@@ -61,6 +89,22 @@ namespace SaratovRoutes.Views
                         zoom: 12
                     }});
 
+       var placemarks = {placemarksJson};
+
+                    placemarks.forEach(function(placemarkData) {{
+                        var placemark = new ymaps.Placemark(placemarkData.coordinates, {{
+                            hintContent: placemarkData.title,
+                            balloonContent: placemarkData.title
+                        }}, {{
+                            preset: 'islands#redDotIcon'
+                        }});
+
+                        placemark.events.add('click', function() {{
+                            window.location.href = 'app://route/' + placemarkData.id;
+                        }});
+
+                        map.geoObjects.add(placemark);
+                    }});
                     // Добавляем пользовательскую кнопку для установки метки на заданных координатах
                     var addMarkerButton = new ymaps.control.Button({{
                         data: {{
@@ -124,6 +168,20 @@ namespace SaratovRoutes.Views
     ";
             CheckAndRequestLocationPermission();
             MapView.Source = new HtmlWebViewSource { Html = htmlContent };
+        }
+
+        async void MapView_Navigating(object sender, WebNavigatingEventArgs e)
+        {
+            if (e.Url.StartsWith("app://route/"))
+            {
+                e.Cancel = true;
+                var id = int.Parse(e.Url.Substring(e.Url.LastIndexOf('/') + 1));
+                var selectedRoute = _routes.FirstOrDefault(r => r.Id == id);
+                if (selectedRoute != null)
+                {
+                    await Navigation.PushAsync(new RoutePage(selectedRoute));
+                }
+            }
         }
 
         private async void ButtonRoutes_Clicked(object sender, EventArgs e)

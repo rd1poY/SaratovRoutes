@@ -5,8 +5,9 @@
              BackgroundColor="#FFFFFF">
     <ContentPage.Content>
         <StackLayout>
-    
-        <WebView x:Name="MapView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+
+            <WebView x:Name="MapView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Navigating="MapView_Navigating" />
+
 
 
 
