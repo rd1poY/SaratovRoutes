@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using SaratovRoutes.Models;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 
 namespace SaratovRoutes.Views
@@ -45,9 +43,11 @@ namespace SaratovRoutes.Views
             }
         }
 
-        public void MapInit(string coordinatesString = null)
+        public async void MapInit(string coordinatesString = null)
         {
-
+            await CheckAndRequestLocationPermission();
+            var location = await Geolocation.GetLocationAsync();
+            var userCoordinates = new double[] { location.Latitude, location.Longitude };
 
             var placemarks = _routes.Select(r => new
             {
@@ -57,6 +57,7 @@ namespace SaratovRoutes.Views
             });
 
             string placemarksJson = JsonConvert.SerializeObject(placemarks);
+            string userCoordinatesJson = JsonConvert.SerializeObject(userCoordinates);
 
             string htmlContent = $@"
         <!DOCTYPE html>
@@ -84,12 +85,13 @@ namespace SaratovRoutes.Views
                 ymaps.ready(init);
 
                 function init() {{
+                    var userCords = {userCoordinatesJson};
                     var map = new ymaps.Map(""map"", {{
-                        center: [51.533557, 46.034257],
+                        center: userCords,
                         zoom: 12
                     }});
 
-       var placemarks = {placemarksJson};
+                    var placemarks = {placemarksJson};
 
                     placemarks.forEach(function(placemarkData) {{
                         var placemark = new ymaps.Placemark(placemarkData.coordinates, {{
@@ -105,7 +107,7 @@ namespace SaratovRoutes.Views
 
                         map.geoObjects.add(placemark);
                     }});
-                    // Добавляем пользовательскую кнопку для установки метки на заданных координатах
+                    
                     var addMarkerButton = new ymaps.control.Button({{
                         data: {{
                             content: 'Моё местоположение'
@@ -117,11 +119,10 @@ namespace SaratovRoutes.Views
                     map.controls.add(addMarkerButton, {{ float: 'left' }});
 
                     addMarkerButton.events.add('click', function (e) {{
-                        var predefinedCoordinates = [51.505154, 45.924671];
-                        addMarker(map, predefinedCoordinates);
+                        addMarker(map, userCords);
                     }});
 
-                    // Проверяем наличие координат
+                    
                     if ('{coordinatesString}' !== '') {{
                         buildRoute(map, '{coordinatesString}');
                     }}
@@ -165,9 +166,10 @@ namespace SaratovRoutes.Views
             </script>
         </body>
         </html>
-    ";
-            CheckAndRequestLocationPermission();
-            MapView.Source = new HtmlWebViewSource { Html = htmlContent };
+";
+            var htmlSource = new HtmlWebViewSource();
+            htmlSource.Html = htmlContent;
+            MapView.Source = htmlSource;
         }
 
         async void MapView_Navigating(object sender, WebNavigatingEventArgs e)
@@ -210,7 +212,7 @@ namespace SaratovRoutes.Views
                 await button.ScaleTo(1, 50, Easing.CubicOut);
             }
         }
-        async void CheckAndRequestLocationPermission()
+        async Task CheckAndRequestLocationPermission()
         {
             var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
             if (status != PermissionStatus.Granted)
@@ -230,3 +232,10 @@ namespace SaratovRoutes.Views
 
     }
 }
+
+
+
+
+
+
+
