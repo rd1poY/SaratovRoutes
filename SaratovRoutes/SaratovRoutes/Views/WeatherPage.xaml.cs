@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SaratovRoutes;
+using Xamarin.Essentials;
 
 namespace SaratovRoutes.Views
 {
@@ -27,21 +28,34 @@ namespace SaratovRoutes.Views
         string apiKey = "a6dda19cad21e5d32048c72a567f55d9";
         private async Task FetchWeatherData(string city)
         {
-          
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await DisplayAlert("Нет подключения", "Пожалуйста, проверьте ваше интернет-соединение.", "ОК");
+                //await Navigation.PopAsync();
+                return;
+            }
+
             string url = $"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={apiKey}&units=metric&lang=ru";
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
+                try
                 {
-                    string json = await response.Content.ReadAsStringAsync();
-                    WeatherForecast forecast = JsonConvert.DeserializeObject<WeatherForecast>(json);
-                    DisplayWeatherForecast(forecast);
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string json = await response.Content.ReadAsStringAsync();
+                        WeatherForecast forecast = JsonConvert.DeserializeObject<WeatherForecast>(json);
+                        DisplayWeatherForecast(forecast);
+                    }
+                    else
+                    {
+                        await DisplayAlert("Ошибка", "Не удалось получить данные о погоде", "ОК");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    await DisplayAlert("Ошибка", "Не удалось получить данные о погоде", "ОК");
+                    await DisplayAlert("Ошибка", "Произошла ошибка при загрузке данных: " + ex.Message, "ОК");
                 }
             }
         }
@@ -59,7 +73,7 @@ namespace SaratovRoutes.Views
             //forecastLabel.Text = "Прогноз на 5 дней:";
             //foreach (var item in forecast.List)
             //{
-              //  forecastLabel.Text += $"\n{item.DtTxt}: {item.Main.Temp} °C, {item.Weather[0].Description}";
+            //  forecastLabel.Text += $"\n{item.DtTxt}: {item.Main.Temp} °C, {item.Weather[0].Description}";
             //}
         }
         private async void ButtonMap_Clicked(object sender, EventArgs e)
@@ -131,9 +145,7 @@ namespace SaratovRoutes.Views
         public string Description { get; set; }
         public string Icon { get; set; }
     }
-   
+
 }
-
-
 
 

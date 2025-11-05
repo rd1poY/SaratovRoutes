@@ -45,6 +45,12 @@ namespace SaratovRoutes.Views
 
         public async void MapInit(string coordinatesString = null)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await DisplayAlert("Нет подключения", "Пожалуйста, проверьте ваше интернет-соединение.", "ОК");
+                await Navigation.PopAsync();
+                return;
+            }
             await CheckAndRequestLocationPermission();
             var location = await Geolocation.GetLocationAsync();
             var userCoordinates = new double[] { location.Latitude, location.Longitude };
@@ -82,6 +88,7 @@ namespace SaratovRoutes.Views
             <div id=""map""></div>
 
             <script>
+                var multiRoute;
                 ymaps.ready(init);
 
                 function init() {{
@@ -129,6 +136,9 @@ namespace SaratovRoutes.Views
                 }}
 
                 function buildRoute(map, coordinates) {{
+                        if (multiRoute) {{
+                        map.geoObjects.remove(multiRoute);
+                    }}
                     var coordinatesArray = coordinates.split('|').map(function(coord) {{
                         return coord.split(',').map(function(value) {{
                             return parseFloat(value);
