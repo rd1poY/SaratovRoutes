@@ -9,6 +9,8 @@ using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
 using System.IO;
 using System.Reflection;
+using Xamarin.Essentials;
+using System.Globalization;
 
 
 namespace SaratovRoutes.Views
@@ -30,6 +32,11 @@ namespace SaratovRoutes.Views
             addRoutePage.RouteAdded += OnRouteAdded;
         }
 
+        private void LoadDurations()
+        {
+            var durations = allRoutes.Select(route => route.time).Where(t => !string.IsNullOrEmpty(t)).Distinct().ToList();
+            DurationPicker.ItemsSource = durations;
+        }
         private void LoadCities()
         {
             var cities = allRoutes.Select(route => route.City).Distinct().ToList();
@@ -51,6 +58,7 @@ namespace SaratovRoutes.Views
             // Изначально показываем все маршруты
             RouteView.ItemsSource = allRoutes;
             LoadCities();
+            LoadDurations();
         }
 
         private List<Route> LoadEmbeddedRoutes()
@@ -97,10 +105,12 @@ namespace SaratovRoutes.Views
         {
             string selectedCity = CityPicker.SelectedItem?.ToString();
             string searchText = RouteSearchBar.Text?.ToLower() ?? string.Empty;
+            string selectedDuration = DurationPicker.SelectedItem?.ToString();
 
             var filteredRoutes = allRoutes.Where(route =>
                 (string.IsNullOrWhiteSpace(selectedCity) || route.City == selectedCity) &&
-                (string.IsNullOrWhiteSpace(searchText) || route.Title.ToLower().Contains(searchText))
+                (string.IsNullOrWhiteSpace(searchText) || route.Title.ToLower().Contains(searchText)) &&
+                (string.IsNullOrWhiteSpace(selectedDuration) || route.time == selectedDuration)
             ).ToList();
 
             RouteView.ItemsSource = filteredRoutes;
@@ -135,6 +145,7 @@ namespace SaratovRoutes.Views
             ViewRoutes();
             FilterRoutes();
             base.OnAppearing();
+
         }
 
         private async void ButtonMap_Clicked(object sender, EventArgs e)
@@ -171,6 +182,16 @@ namespace SaratovRoutes.Views
             // Обновляем список маршрутов
             ViewRoutes();
             Console.WriteLine("Route added event triggered.");
+        }
+        private void OnDurationSelected(object sender, EventArgs e)
+        {
+            FilterRoutes();
+        }
+
+        private void OnClearDurationFilterClicked(object sender, EventArgs e)
+        {
+            DurationPicker.SelectedItem = null;
+            FilterRoutes();
         }
 
 

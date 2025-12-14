@@ -21,6 +21,7 @@
                 </Frame>
                 <Button TextColor="White" BackgroundColor="Black" FontSize="13" Clicked="ButtonAdd_Clicked"   Pressed="OnButtonPressed" Released="OnButtonReleased" Text="Добавить"></Button>
             </StackLayout>
+            
             <Frame BackgroundColor="White"
        HasShadow="True"
        CornerRadius="10"
@@ -32,7 +33,7 @@
                    FontAttributes="Bold"
                    FontSize="Medium"
                    TextColor="Black"
-                   Margin="30,12,0,0"/>
+                   Margin="20,12,0,0"/>
 
                     <Frame BackgroundColor="White"
                     HasShadow="True"
@@ -52,6 +53,39 @@
                     />
                 </StackLayout>
             </Frame>
+                        <Frame BackgroundColor="White"
+                   HasShadow="True"
+                   CornerRadius="10"
+                   Margin="0"
+                   Padding="0"
+                               VerticalOptions="EndAndExpand"
+                   >
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="10,0,0,-3" Padding="0,0,0,0">
+                    <Label Text="Время:"
+                           FontAttributes="Bold"
+                           FontSize="Medium"
+                           TextColor="Black"
+                           Margin="20,12,0,0"/>
+
+                    <Frame BackgroundColor="White"
+                           HasShadow="True"
+                           BorderColor="Black"
+                           CornerRadius="10"
+                           Margin="0"
+                           Padding="0">
+                        <Picker x:Name="DurationPicker" Title="Выберите время"  
+                                TextColor="Black" SelectedIndexChanged="OnDurationSelected"
+                                BackgroundColor="White"/>
+                    </Frame>
+                    <Button Text="Очистить"
+                            Clicked="OnClearDurationFilterClicked"
+                            Pressed="OnButtonPressed" Released="OnButtonReleased"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                            />
+                </StackLayout>
+            </Frame>
+                
             <!-- CollectionView для отображения маршрутов -->
             <CollectionView x:Name="RouteView"
                             Margin="4"
